@@ -36,6 +36,14 @@ yarn run dev
 
 After that, you can open the application in browser by http://localhost:8080/
 
+## Tests
+
+To run tests
+
+```bash
+yarn run test
+```
+
 ## ESLint
 
 To check the quality of code, we use the linter (ESLint)
