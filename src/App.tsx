@@ -8,7 +8,7 @@ function App() {
 
     return (
         <div className="App">
-            <div className={styles.div}>
+            <div className={styles['div']}>
                 <a href="https://reactjs.org" rel="noreferrer" target="_blank">
                     <img src={reactLogo} className="logo react" alt="React logo"/>
                 </a>
