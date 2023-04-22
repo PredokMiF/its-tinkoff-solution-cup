@@ -54,7 +54,7 @@
             "ignoreRegExpLiterals": true
         }],
         "no-console": ["warn", { "allow": ["warn", "error"] }],
-        "no-param-reassign": ["warn", { "props": true, "ignorePropertyModificationsFor": ["out"] }],
+        "no-param-reassign": ["off"],
         "object-curly-newline": ["warn", {
             "ObjectExpression": { "consistent": true },
             "ObjectPattern": { "consistent": true },
@@ -64,6 +64,8 @@
         "react/jsx-indent": ["warn", 4],
         "react/jsx-indent-props": ["warn", 4],
         "react/jsx-one-expression-per-line": "off",
-        "react/jsx-tag-spacing": ["error", { "closingSlash": "never", "beforeSelfClosing": "never", "afterOpening": "never", "beforeClosing": "never" }]
+        "react/jsx-tag-spacing": ["error", { "closingSlash": "never", "beforeSelfClosing": "never", "afterOpening": "never", "beforeClosing": "never" }],
+        "react/react-in-jsx-scope": "off",
+        "react/function-component-definition": "off"
     }
 }

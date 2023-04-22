@@ -1,0 +1,45 @@
+.content {
+    display: grid;
+    grid-template-columns: auto auto;
+
+    & > * {
+        padding: 8px;
+    }
+}
+
+.availableLabel {
+    font-weight: bold;
+}
+
+.debetLabel {
+    background-color: #b4f3b4;
+}
+
+.debet {
+    background-color: #b4f3b4;
+    text-align: right;
+}
+
+.creditLabel {
+    background-color: #ffa9c5;
+}
+
+.credit {
+    background-color: #ffa9c5;
+    text-align: right;
+}
+
+.available {
+    font-weight: bold;
+    text-align: right;
+}
+
+.debetLink {
+    text-align: center;
+    color: #3c833c;
+}
+
+.creditLink {
+    text-align: center;
+    color: #f60e5a;
+}

@@ -1,0 +1,16 @@
+import { z } from 'zod'
+
+export const TableDataSchema = z.object({
+    key: z.string(),
+    firstName: z.string().min(1, { message: 'Слишком короткое имя' }).max(30, { message: 'Слишком длинное имя' }),
+    lastName: z.string().min(1, { message: 'Слишком короткая фамилия' }).max(30, { message: 'Слишком длинная фамилия' }),
+    age: z.number().min(0, { message: 'Слишком маленький возраст' }),
+    address: z.string().min(1, { message: 'Введите адрес' }),
+    active: z.boolean(),
+    access: z.union([
+        z.literal('full'),
+        z.literal('partial'),
+    ]),
+})
+
+export type TableData = z.infer<typeof TableDataSchema>

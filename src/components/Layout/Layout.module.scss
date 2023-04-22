@@ -1,0 +1,21 @@
+.layout {
+    margin: 16px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+
+    & > a {
+        padding: 16px;
+
+        &:hover {
+            background-color: #e5e5e5;
+        }
+    }
+}
+
+.title {
+    text-align: center;
+}
