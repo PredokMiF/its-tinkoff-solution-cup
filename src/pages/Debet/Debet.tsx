@@ -2,6 +2,7 @@ import type { ColumnsType } from 'antd/es/table'
 
 import { Table } from 'antd'
 import { useEffect, useState, useMemo } from 'react'
+import { NavLink } from 'react-router-dom'
 
 import type { Record } from '~/types/record'
 
@@ -12,6 +13,8 @@ import { getAccount } from '~/api/getAccount'
 import { getGroup } from '~/api/getGroup'
 import { getTag } from '~/api/getTag'
 import { Layout } from '~/components/Layout'
+
+import styles from './Debet.module.scss'
 
 export function Debet() {
     const mountedRef = useMounted()
@@ -62,6 +65,19 @@ export function Debet() {
                 dataIndex: 'comment',
                 key: 'comment',
             },
+            {
+                title: '',
+                key: 'actions',
+                render: (record: Record) => {
+                    return (
+                        <div className={styles['toolbar']}>
+                            <NavLink to="/debet/new">+</NavLink>
+                            <NavLink to="/debet/edit" state={record}>✎</NavLink>
+                            <NavLink to="/debet/delete" state={record}>✖</NavLink>
+                        </div>
+                    )
+                },
+            },
         ]
 
         return columns
@@ -91,13 +107,3 @@ export function Debet() {
         </Layout>
     )
 }
-
-/* <Column
-    title="Действия"
-    key="action"
-    render={(_: any, record: TableData) => (
-        <Space size="middle">
-            <NavLink to="/edit" state={record}>Редактировать</NavLink>
-        </Space>
-    )}
-/> */
